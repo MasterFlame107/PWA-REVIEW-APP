@@ -1,2 +1,11 @@
 {% extends "base.html" %} {% block title %}Movies{% endblock %}
-<h1>T</h1>
+{% block %}
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+{{movieinfo}}
+<br />
+</h1>{{movieinfo[0]}}</h1>
+{{movieinfo[1]}}
+{{movieinfo[2]}}
+<img src = {{movieinfo[3]}}></img>
+{% endblock %}

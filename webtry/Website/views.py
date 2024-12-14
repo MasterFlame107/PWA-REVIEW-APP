@@ -40,3 +40,26 @@ def delete_note():
 @login_required
 def Moviepage():
     return render_template("movie.html", user=current_user)
+import requests
+import tmdbsimple as tmdb
+tmdb.API_KEY = '88efc50ea253d10e2b2edd2fb70f0ef6'
+
+def movieset(code):
+    movie = tmdb.Movies(code)
+    response = (movie.info())
+    name = (movie.title)
+    budget = (f"${movie.budget}")
+    synop = (response['overview'])
+    poster = (f"https://image.tmdb.org/t/p/w500{response['poster_path']}")
+    return [name, budget, synop, poster]
+
+def movieroutes(id):
+    @views.route(f'/movies/{id}', methods=['GET','POST'])
+    @login_required
+    def movieInfo():
+        return render_template('moviebase.html', movieInfo = movieset(id))
+    
+#idList = [423,11220,406,103931,666277,577922,475557,155,13]
+#for element in idList:
+#    movieroutes(element)
+
