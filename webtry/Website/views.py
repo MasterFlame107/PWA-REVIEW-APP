@@ -57,17 +57,17 @@ def movieset(code):
 @views.route('/movies/423', methods=['GET','POST'])
 @login_required
 def moviePage_pianist():
-    return render_template('moviebase.html', movieInfo = movieset(423))
+    return render_template('moviebase.html', movieInfo = movieset(423), user=current_user)
 
 @views.route('/movies/11220', methods=['GET','POST'])
 @login_required
 def moviePage_fallenangels():
-    return render_template('moviebase.html', movieInfo = movieset(11220))
+    return render_template('moviebase.html', movieInfo = movieset(11220), user=current_user)
 
 @views.route('/movies/406', methods=['GET','POST'])
 @login_required
 def moviePage_lahaine():
-    return render_template('moviebase.html', movieInfo = movieset(406))
+    return render_template('moviebase.html', movieInfo = movieset(406), user=current_user)
     
 idList = [423,11220,406,103931,666277,577922,475557,155,13]
 
