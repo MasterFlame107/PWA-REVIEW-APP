@@ -1,17 +1,19 @@
 {% extends "base.html" %} {% block title %}Movies{% endblock %}
 {% block content %}
-<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
 <br />
-</h1 href={{movieInfo[0]}}></h1>
-<aside>
-    <h2>Synopsis</h2>
-    <p>{{movieInfo[2]}}</p>
-    <br />
-    <h2>Film Budget</h2>
-    {{movieInfo[1]}}
-</aside>
-<img src = {{movieInfo[3]}}></img>
+<div class="text-left">
+    <h1 href="{{movieInfo[0]}}">{{movieInfo[0]}}</h1>
+    <aside>
+      <h2>Synopsis</h2>
+      <p>{{movieInfo[2]}}</p>
+      <br />
+      <h2>Film Budget</h2>
+      <span>{{movieInfo[1]}}</span>
+    </aside>
+    <img src="{{movieInfo[3]}}" alt="Movie Image">
+  </div>
+  
 
 <br /><br />
 
