@@ -59,7 +59,7 @@ def movieroutes(id):
     def movieInfo():
         return render_template('moviebase.html', movieInfo = movieset(id))
     
-#idList = [423,11220,406,103931,666277,577922,475557,155,13]
-#for element in idList:
-#    movieroutes(element)
+idList = [423,11220,406,103931,666277,577922,475557,155,13]
+for element in idList:
+    movieroutes(element)
 
