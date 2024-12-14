@@ -2,10 +2,35 @@
 {% block content %}
 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-{{movieInfo}}
 <br />
-</h1>{{movieInfo[0]}}</h1>
-{{movieInfo[1]}}
-{{movieInfo[2]}}
+</h1 href={{movieInfo[0]}}></h1>
+<aside>
+    <h2>Synopsis</h2>
+    <p>{{movieInfo[2]}}</p>
+    <br />
+    <h2>Film Budget</h2>
+    {{movieInfo[1]}}
+</aside>
 <img src = {{movieInfo[3]}}></img>
+
+<br /><br />
+
+<h1 align="center">Notes</h1>
+    <ul class="list-group list-group-flush" id="notes">
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <!-- <button type="button" class="close" onClick="deleteNote({{note.Id}})">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="note" id="note" class="form-control" alttext="Review goes here (300 Characters max)"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+      </div>
+    </form>
 {% endblock %}
