@@ -56,7 +56,7 @@ def movieset(code):
 def movieroutes(id):
     @views.route(f'/movies/{id}', methods=['GET','POST'])
     @login_required
-    def movieInfo():
+    def moviePage():
         return render_template('moviebase.html', movieInfo = movieset(id))
     
 idList = [423,11220,406,103931,666277,577922,475557,155,13]
