@@ -53,13 +53,21 @@ def movieset(code):
     poster = (f"https://image.tmdb.org/t/p/w500{response['poster_path']}")
     return [name, budget, synop, poster]
 
-def movieroutes(id):
-    @views.route(f'/movies/{id}', methods=['GET','POST'])
-    @login_required
-    def moviePage():
-        return render_template('moviebase.html', movieInfo = movieset(id))
+
+@views.route('/movies/423', methods=['GET','POST'])
+@login_required
+def moviePage_pianist():
+    return render_template('moviebase.html', movieInfo = movieset(423))
+
+@views.route('/movies/11220', methods=['GET','POST'])
+@login_required
+def moviePage_fallenangels():
+    return render_template('moviebase.html', movieInfo = movieset(11220))
+
+@views.route('/movies/406', methods=['GET','POST'])
+@login_required
+def moviePage_lahaine():
+    return render_template('moviebase.html', movieInfo = movieset(406))
     
 idList = [423,11220,406,103931,666277,577922,475557,155,13]
-for element in idList:
-    movieroutes(element)
 
