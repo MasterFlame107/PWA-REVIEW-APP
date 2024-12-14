@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block title %}SignUP{% endblock %}
+{% extends "base.html" %} {% block title %}Movies{% endblock %}
 {% block content
     %}
     <h1 align="center">Notes</h1>
@@ -6,9 +6,9 @@
       {% for note in user.notes %}
       <li class="list-group-item">
         {{ note.data }}
-        <button type="button" class="close" onClick="deleteNote({{note.Id}})">
+        <!-- <button type="button" class="close" onClick="deleteNote({{note.Id}})">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
       </li>
       {% endfor %}
     </ul>
@@ -20,3 +20,27 @@
       </div>
     </form>
     {% endblock %}
+
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">The Pianist</h4>
+          <a href="#" class="btn btn-primary">See Movie Profile</a>
+        </div>
+      </div>
+
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/yyM9BPdwttK5LKZSLvHae7QPKo1.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Fallen Angels</h4>
+          <a href="#" class="btn btn-primary">See Movie Profile</a>
+        </div>
+      </div>
+
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/a6DGCZC2fHNr07tyRumM30ALEKE.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">La Haine</h4>
+          <a href="#" class="btn btn-primary">See Movie Profile</a>
+        </div>
+      </div>
