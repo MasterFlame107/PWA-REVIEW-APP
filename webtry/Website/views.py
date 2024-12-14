@@ -22,7 +22,7 @@ def home():
             db.session.commit()
             flash('Note added!', category='success')
 
-    return render_template("home.html")
+    return render_template("home.html", user = current_user)
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():  
