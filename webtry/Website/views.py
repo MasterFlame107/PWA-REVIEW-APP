@@ -70,6 +70,35 @@ def moviePage_fallenangels():
 @login_required
 def moviePage_lahaine():
     return render_template('moviebase.html', movieInfo = movieset(406), user=current_user)
+
+@views.route('/movies/103931', methods=['GET','POST'])
+@login_required
+def moviePage_duvidha():
+    return render_template('moviebase.html', movieInfo = movieset(103931), user=current_user)
+
+@views.route('/movies/666277', methods=['GET','POST'])
+@login_required
+def moviePage_pastlives():
+    return render_template('moviebase.html', movieInfo = movieset(666277), user=current_user)
+
+@views.route('/movies/577922', methods=['GET','POST'])
+@login_required
+def moviePage_tenet():
+    return render_template('moviebase.html', movieInfo = movieset(577922), user=current_user)
+
+@views.route('/movies/475557', methods=['GET','POST'])
+@login_required
+def moviePage_joker():
+    return render_template('moviebase.html', movieInfo = movieset(47577), user=current_user)
+
+@views.route('/movies/155', methods=['GET','POST'])
+@login_required
+def moviePage_darkKnight():
+    return render_template('moviebase.html', movieInfo = movieset(155), user=current_user)
+
+@views.route('/movies/13', methods=['GET','POST'])
+@login_required
+def moviePage_forrestGump():
+    return render_template('moviebase.html', movieInfo = movieset(13), user=current_user)
     
-idList = [423,11220,406,103931,666277,577922,475557,155,13]
 
