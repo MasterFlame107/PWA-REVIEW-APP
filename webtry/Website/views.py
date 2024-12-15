@@ -71,6 +71,7 @@ def moviePage_pianist():
             db.session.add(new_note) #adding the note to the database 
             db.session.commit()
             flash('Note added!', category='success')
+    movie_notes = Note.query.filter_by(movie_page="pianist").all()
 
     return render_template('moviebase.html', movieInfo = movieset(423), user=current_user)
 

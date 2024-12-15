@@ -19,3 +19,4 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(150))
     admin_auth = db.Column(db.Boolean)
     notes = db.relationship('Note')
+    
