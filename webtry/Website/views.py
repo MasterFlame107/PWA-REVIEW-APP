@@ -9,19 +9,6 @@ views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
-    if request.method == 'POST': 
-        note = request.form.get('note')#Gets the note from the HTML 
-
-        if len(note) < 1:
-            flash('Note is too short!', category='error') 
-        elif len(note) > 300:
-            flash('Note is too Long, 300 chracters Max', category='error')
-        else:
-            new_note = Note(data=note, user_id=current_user.id, movie_page=pianist, user_name=current_user.first_name ) #providing the schema for the note 
-            db.session.add(new_note) #adding the note to the database 
-            db.session.commit()
-            flash('Note added!', category='success')
-
     return render_template("home.html", user = current_user)
 
 @views.route('/delete-note', methods=['POST'])
