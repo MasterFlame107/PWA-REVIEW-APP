@@ -67,7 +67,7 @@ def moviePage_pianist():
         elif len(note) > 300:
             flash('Note is too Long, 300 chracters Max', category='error')
         else:
-            new_note = Note(data=note, user_id=current_user.id, movie_page=pianist)  #providing the schema for the note 
+            new_note = Note(data=note, user_id=current_user.id, movie_page="pianist")  #providing the schema for the note 
             db.session.add(new_note) #adding the note to the database 
             db.session.commit()
             flash('Note added!', category='success')
@@ -102,7 +102,7 @@ def moviePage_tenet():
 @views.route('/movies/475557', methods=['GET','POST'])
 @login_required
 def moviePage_joker():
-    return render_template('moviebase.html', movieInfo = movieset(4755577), user=current_user)
+    return render_template('moviebase.html', movieInfo = movieset(475557), user=current_user)
 
 @views.route('/movies/155', methods=['GET','POST'])
 @login_required
