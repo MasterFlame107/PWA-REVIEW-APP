@@ -39,6 +39,7 @@
 
 <h1 align="center">Comment</h1>
     <ul class="list-group list-group-flush" id="notes">
+      {{movie_notes}}
       {% for note in movie_notes %}
       <li class="list-group-item">
         {{ note.data }}
