@@ -68,7 +68,7 @@
     <h1>Rate This Movie</h1>
     <form method='POST' name = 'rating', id = 'rating' action="/movies/423">
     <div class="star-rating">
-      <!-- The stars -->
+      <!-- The stars 
       <input type="radio" id="star5" name="rating" value="5">
       <label for="star5" title="5 stars">★</label>
   
@@ -82,8 +82,16 @@
       <label for="star2" title="2 stars">★</label>
   
       <input type="radio" id="star1" name="rating" value="1">
-      <label for="star1" title="1 star">★</label>
+      <label for="star1" title="1 star">★</label> -->
     </div>
+    <label for="rating">Rate this movie:</label>
+      <select name="rating" id="rating" class="form-control">
+      <option value="1">★</option>
+      <option value="2">★★</option>
+      <option value="3">★★★</option>
+      <option value="4">★★★★</option>
+      <option value="5">★★★★★</option>
+  </select>
     <textarea name="note" id="note" class="form-control" alttext="Review goes here (300 Characters max)"></textarea>
       <br />
       <div align="center">
@@ -91,6 +99,7 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>
   </form>
+  <!--
   <script>
     const stars = document.querySelectorAll('.star-rating input');
     stars.forEach(star => {
@@ -99,5 +108,5 @@
         console.log("Selected Rating: ", rating); // You can log it to see if it works
       });
     });
-  </script>
+  </script> -->
 {% endblock %}
