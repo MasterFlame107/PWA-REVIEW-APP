@@ -39,7 +39,7 @@
 
 <h1 align="center">Comment</h1>
     <ul class="list-group list-group-flush" id="notes">
-      {% for note in notes %}
+      {% for note in movie_page.notes %}
       <li class="list-group-item">
         {{ note.data }}
         <!-- <button type="button" class="close" onClick="deleteNote({{note.Id}})">
