@@ -10,7 +10,7 @@ views = Blueprint('views', __name__)
 @views.route('/', methods=['GET', 'POST'])
 def home():
     return render_template("home.html", user = current_user)
-
+'''
 @views.route('/delete-note', methods=['POST'])
 def delete_note():  
     note = json.loads(request.data) # this function expects a JSON from the INDEX.js file 
@@ -18,9 +18,10 @@ def delete_note():
     note = Note.query.get(noteId)
     if note:
         db.session.commit()
-            
-
     return jsonify({})
+'''            
+
+
 
 @views.route('/movies', methods=['GET','POST'])
 @login_required
@@ -54,7 +55,8 @@ def moviePage_pianist():
         elif len(note) > 300:
             flash('Note is too Long, 300 chracters Max', category='error')
         else:
-            new_note = Note(data=note, user_id=current_user.id, movie_page="pianist")  #providing the schema for the note 
+            new_note = Note(data=note, user_id=current_user.id, movie_page="pianist", user_name=current_user.first_name)  #providing the schema for the note 
+            
             db.session.add(new_note) #adding the note to the database 
             db.session.commit()
             flash('Note added!', category='success')
