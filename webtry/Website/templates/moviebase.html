@@ -66,7 +66,7 @@
       {% endfor %}
     </ul>
     <h1>Rate This Movie</h1>
-    <form method='POST'>
+    <form method='POST' name = 'rating', id = 'rating' action="/movies/423">
     <div class="star-rating">
       <!-- The stars -->
       <input type="radio" id="star5" name="rating" value="5">
@@ -86,17 +86,16 @@
     </div>
     <textarea name="note" id="note" class="form-control" alttext="Review goes here (300 Characters max)"></textarea>
       <br />
-      <div align="center">
-        <button type="submit" class="btn btn-primary">Add Comment</button>
-      </div>  
-    </form>
+  </form>
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Review</button>
+  </div>
   <script>
     // JavaScript to update the rating display
     const stars = document.querySelectorAll('.star-rating input');
     const ratingDisplay = document.getElementById('rating-display');
     stars.forEach(star => {
-      star.addEventListener('change', () => {
-        console.log(${star.value})
+      star.addEventListener('change', () => { console.log($(star.value))
       });
     });
   </script>
