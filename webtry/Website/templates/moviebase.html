@@ -41,7 +41,7 @@
     <ul class="list-group list-group-flush" id="notes">
       {% for note in movie_notes %}
       <li class="list-group-item">
-        <p>{{note.user_name}} ,  {{note.date}}</p>
+        <p>{{note.user_id}} ,  {{note.date}}</p>
         {{ note.data }}
         <!-- <button type="button" class="close" onClick="deleteNote({{note.Id}})">
           <span aria-hidden="true">&times;</span>
