@@ -31,9 +31,8 @@
     <span>{{movieInfo[1]}}</span>
     <br />
     <h3>Genres</h3>
-    <span>
-        {{movieInfo[5]}}
-    </span>
+    <span>  {% for element in movieInfo[5]: print(element)%}{%endfor%} </span>
+    <br />
     <h2>Synopsis</h2>
     <p>{{movieInfo[2]}}</p>
   </div>
