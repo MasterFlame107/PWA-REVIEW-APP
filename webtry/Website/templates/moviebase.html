@@ -56,7 +56,7 @@
 </div>
 
 <br /><br />
-<h1 align="center">Comment</h1>
+<h1 align="center">Comments</h1>
     <ul class="list-group list-group-flush" id="notes">
       {% for note in movie_notes %}
         <li class="list-group-item">
@@ -84,14 +84,16 @@
       <input type="radio" id="star1" name="rating" value="1">
       <label for="star1" title="1 star">★</label> -->
     </div>
-    <label for="rating">Rate this movie:</label>
+    <div class = form-group>
+    <label for="rating">Rate this movie out of 5:</label>
       <select name="rating" id="rating" class="form-control">
       <option value="1">★</option>
       <option value="2">★★</option>
       <option value="3">★★★</option>
       <option value="4">★★★★</option>
       <option value="5">★★★★★</option>
-  </select>
+      </select>
+    </div>
     <textarea name="note" id="note" class="form-control" alttext="Review goes here (300 Characters max)"></textarea>
       <br />
       <div align="center">
