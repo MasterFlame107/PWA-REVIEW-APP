@@ -60,20 +60,13 @@
     <ul class="list-group list-group-flush" id="notes">
       {% for note in movie_notes %}
         <li class="list-group-item">
-        <p>{{note.user_name}} ,  {{note.date}}</p>
+        <p>{{note.user_name}} ,  {{note.date}} , <strong>Rating:</strong> {{ note.rating }} star(s)</p></p>
         {{ note.data }}
-        <!-- <button type="button" class="close" onClick="deleteNote({{note.Id}})">
-          <span aria-hidden="true">&times;</span>
-        </button> -->
         </li>
-        {% if note.data %}
-          <p><strong>Note:</strong> {{ note.data }}</p>
-        {% endif %}
-        <p><strong>Rating:</strong> {{ note.rating }} star(s)</p>
       {% endfor %}
     </ul>
     <h1>Rate This Movie</h1>
-    <form methpd='POST'>
+    <form method='POST' name = 'rating', id = 'rating'>
     <div class="star-rating">
       <!-- The stars -->
       <input type="radio" id="star5" name="rating" value="5">
@@ -99,11 +92,7 @@
       <div align="center">
         <button type="submit" class="btn btn-primary">Add Comment</button>
       </div>
-    </form>
-
-  
-  <p id="rating-display">Select a rating!</p>
-  
+    </form>  
   <script>
     // JavaScript to update the rating display
     const stars = document.querySelectorAll('.star-rating input');
