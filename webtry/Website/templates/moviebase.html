@@ -27,14 +27,15 @@
   <img src="{{movieInfo[3]}}" alt="Movie Image">
   <div class="text-content">
     <h1 href="{{movieInfo[0]}}">{{movieInfo[0]}}</h1>
-    <h2>Film Budget</h2>
+    <h3>Film Budget</h3>
     <span>{{movieInfo[1]}}</span>
     <br />
-    <h2>Genres</h2>
+    <h3>Genres</h3>
     <span>
         {% for element in movieInfo[5] %}
-        {% print(element)%}
+        <p>{{ element }}</p>
         {% endfor %}
+
     </span>
     <h2>Synopsis</h2>
     <p>{{movieInfo[2]}}</p>
