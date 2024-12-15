@@ -2,19 +2,38 @@
 {% block content %}
 
 <br />
+<style>
+  .text-left {
+    display: flex; /* Flexbox layout for side-by-side arrangement */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between the image and text */
+  }
+
+  .text-left img {
+    max-width: 300px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .text-content {
+    flex: 1; /* Take up remaining space next to the image */
+  }
+
+  .text-content h2, .text-content p, .text-content span {
+    text-align: left; /* Ensure all text is left-aligned */
+  }
+</style>
+
 <div class="text-left">
-    <h1 href="{{movieInfo[0]}}">{{movieInfo[0]}}</h1>
-    <aside>
-    <br />    
-      <h2>Film Budget</h2>
-      <span>{{movieInfo[1]}}</span>
-      <br />
-      <h2>Synopsis</h2>
-      <p>{{movieInfo[2]}}</p>     
-    </aside>
-  </div>
   <img src="{{movieInfo[3]}}" alt="Movie Image">
-  
+  <div class="text-content">
+    <h1 href="{{movieInfo[0]}}">{{movieInfo[0]}}</h1>
+    <h2>Film Budget</h2>
+    <span>{{movieInfo[1]}}</span>
+    <br />
+    <h2>Synopsis</h2>
+    <p>{{movieInfo[2]}}</p>
+  </div>
+</div>
 
 <br /><br />
 
