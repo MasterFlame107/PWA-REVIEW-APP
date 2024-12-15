@@ -84,15 +84,13 @@
       <input type="radio" id="star1" name="rating" value="1">
       <label for="star1" title="1 star">★</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit Rating</button>
-  </form>
-    <form method="POST">
-      <textarea name="note" id="note" class="form-control" alttext="Review goes here (300 Characters max)"></textarea>
+    <textarea name="note" id="note" class="form-control" alttext="Review goes here (300 Characters max)"></textarea>
       <br />
       <div align="center">
         <button type="submit" class="btn btn-primary">Add Comment</button>
       </div>
-    </form>  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
   <script>
     // JavaScript to update the rating display
     const stars = document.querySelectorAll('.star-rating input');
