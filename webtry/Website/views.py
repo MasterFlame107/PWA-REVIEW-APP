@@ -50,7 +50,10 @@ def movieset(code):
     budget = (f"${movie.budget}")
     synop = (response['overview'])
     poster = (f"https://image.tmdb.org/t/p/w500{response['poster_path']}")
-    return [name, budget, synop, poster]
+    genre = []
+    for g in response['genres']:
+       genre.append(g['name'])
+    return [name, budget, synop, poster, genre]
 
 
 @views.route('/movies/423', methods=['GET','POST'])

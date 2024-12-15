@@ -30,6 +30,11 @@
     <h2>Film Budget</h2>
     <span>{{movieInfo[1]}}</span>
     <br />
+    <h2>Genres</h2>
+    <span>
+        {% for element in movieInfo[5] %}
+        {% print(element, end=" ")%}
+    </span>
     <h2>Synopsis</h2>
     <p>{{movieInfo[2]}}</p>
   </div>
