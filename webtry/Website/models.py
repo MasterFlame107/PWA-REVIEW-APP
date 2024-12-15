@@ -10,6 +10,7 @@ class Note(db.Model):
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     movie_page = db.Column(db.String(150))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_name = db.Column(db.String(150))
 
 
 class User(db.Model, UserMixin):
