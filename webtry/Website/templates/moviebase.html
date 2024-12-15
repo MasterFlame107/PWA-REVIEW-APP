@@ -33,7 +33,8 @@
     <h2>Genres</h2>
     <span>
         {% for element in movieInfo[5] %}
-        {% print(element, end=" ")%}
+        {% print(element)%}
+        {% endfor %}
     </span>
     <h2>Synopsis</h2>
     <p>{{movieInfo[2]}}</p>
