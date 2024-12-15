@@ -71,10 +71,10 @@ def moviePage_pianist():
             db.session.add(new_note) #adding the note to the database 
             db.session.commit()
             flash('Note added!', category='success')
-    movie_notes = Note.query.filter_by(movie_page="pianist").all()
-    print(movie_notes)
+    movienotes = Note.query.filter_by(movie_page="pianist").all()
+    print(movienotes)
 
-    return render_template('moviebase.html', movieInfo = movieset(423), user=current_user)
+    return render_template('moviebase.html', movieInfo = movieset(423), user=current_user, movie_notes = movienotes)
 
 @views.route('/movies/11220', methods=['GET','POST'])
 @login_required
