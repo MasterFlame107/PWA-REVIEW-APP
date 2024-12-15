@@ -11,6 +11,7 @@ class Note(db.Model):
     movie_page = db.Column(db.String(150))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     user_name = db.Column(db.String(150))
+    rating = db.Column(db.Integer)
 
 
 class User(db.Model, UserMixin):
