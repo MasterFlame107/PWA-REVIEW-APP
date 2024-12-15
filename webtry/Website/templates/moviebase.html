@@ -67,7 +67,7 @@
     </ul>
     <h1>Rate This Movie</h1>
     <form method='POST' name = 'rating', id = 'rating'>
-    <div class="star-rating">
+    <div class="rating">
       <!-- The stars -->
       <input type="radio" id="star5" name="rating" value="5">
       <label for="star5" title="5 stars">★</label>
@@ -93,7 +93,7 @@
   </form>
   <script>
     // JavaScript to update the rating display
-    const stars = document.querySelectorAll('.star-rating input');
+    const stars = document.querySelectorAll('.rating input');
     const ratingDisplay = document.getElementById('rating-display');
   
     stars.forEach(star => {
