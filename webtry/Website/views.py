@@ -17,7 +17,7 @@ def home():
         elif len(note) > 300:
             flash('Note is too Long, 300 chracters Max', category='error')
         else:
-            new_note = Note(data=note, user_id=current_user.id, movie_page=pianist)  #providing the schema for the note 
+            new_note = Note(data=note, user_id=current_user.id, movie_page=pianist, user_name=current_user.first_name ) #providing the schema for the note 
             db.session.add(new_note) #adding the note to the database 
             db.session.commit()
             flash('Note added!', category='success')
